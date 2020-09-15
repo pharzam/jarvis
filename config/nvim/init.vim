@@ -151,7 +151,7 @@ let g:neosnippet#snippets_directory='~/.config/nvim/snippets'
 let g:neosnippet#enable_conceal_markers = 0
 
 " === NERDTree === "
-" Show hidden files/directories
+" Show
 let g:NERDTreeShowHidden = 1
 
 " Remove bookmarks and help text from NERDTree
