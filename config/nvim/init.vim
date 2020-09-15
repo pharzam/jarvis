@@ -5,6 +5,9 @@ source ~/.config/nvim/plugins.vim
 " ===                           EDITING OPTIONS                            === "
 " ============================================================================ "
 
+" Remap jj to Esc
+inoremap jj <ESC>
+
 " Remap leader key to ,
 let g:mapleader=','
 
