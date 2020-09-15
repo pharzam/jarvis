@@ -5,9 +5,6 @@ source ~/.config/nvim/plugins.vim
 " ===                           EDITING OPTIONS                            === "
 " ============================================================================ "
 
-" Remap jj to Esc
-inoremap jj <ESC>
-
 " Remap leader key to ,
 let g:mapleader=','
 
@@ -326,9 +323,13 @@ endtry
 "   <leader>g - Search current directory for occurences of given term and close window if no results
 "   <leader>j - Search current directory for occurences of word under cursor
 nmap ; :Denite buffer<CR>
-nmap <leader>t :DeniteProjectDir file/rec<CR>
+nmap <leader>t :DeniteProjectDir file<CR>
 nnoremap <leader>g :<C-u>Denite grep:. -no-empty<CR>
 nnoremap <leader>j :<C-u>DeniteCursorWord grep:.<CR>
+
+" Remap jj to Esc
+inoremap jj <ESC>
+
 
 " Define mappings while in 'filter' mode
 "   <C-o>         - Switch to normal mode inside of search results
