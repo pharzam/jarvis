@@ -84,5 +84,8 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
+" Marcdown viewer
+Plug 'euclio/vim-markdown-composer'
+
 " Initialize plugin system
 call plug#end()
