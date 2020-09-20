@@ -6,7 +6,11 @@
     "json",
     "javascriptreact"
   ],
+  "eslint.nodePath": "/Users/farzam/.config/yarn/global/node_modules",
   "eslint.filetypes": ["javascript", "javascriptreact"],
+  "eslint.options": {
+    "configFile": "/Users/farzam/.eslintrc.js"
+  },
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "º",
   "diagnostic.infoSign": "."
