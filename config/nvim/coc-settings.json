@@ -13,5 +13,8 @@
   },
   "diagnostic.errorSign": "•",
   "diagnostic.warningSign": "º",
-  "diagnostic.infoSign": "."
+  "diagnostic.infoSign": ".",
+  "cSpell.userWords": [
+    "retmes"
+  ]
 }
