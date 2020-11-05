@@ -27,7 +27,7 @@ set -g mode-style "fg=colour3"
 
 # Set Ctrl-a as the default prefix key combination
 # and unbind C-b to free it up
-set -g prefix C-a
+set -g prefix C-t
 unbind C-b
 
 # Start windows numbering at 1
@@ -63,16 +63,16 @@ bind - split-window -v
 bind | split-window -h
 
 # Map vim movement keys as pane movement keys with prefix
-bind h select-pane -L
-bind j select-pane -D
-bind k select-pane -U
-bind l select-pane -R
+bind -r h select-pane -L
+bind -r j select-pane -D
+bind -r k select-pane -U
+bind -r l select-pane -R
 
 # resize panes using PREFIX H, J, K, L
-bind H resize-pane -L 5
-bind J resize-pane -D 5
-bind K resize-pane -U 5
-bind L resize-pane -R 5
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
 
 # visual notification of activity in other windows
 setw -g monitor-activity on
