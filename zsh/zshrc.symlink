@@ -119,6 +119,12 @@ alias ls="colorls -lA --sd"
 
 source $ZSH/oh-my-zsh.sh
 
+if [ -f ~/projects/laboratory/dotes/.bash-aliases ]; then
+    source ~/projects/laboratory/dotes/.bash-aliases
+else
+    print "404: ~/.zsh/zshalias not found."
+fi
+
 # Set Spaceship as prompt
 autoload -U promptinit; promptinit
 prompt spaceship
