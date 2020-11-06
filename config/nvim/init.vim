@@ -1,3 +1,4 @@
+
 scriptencoding utf-8
 source ~/.config/nvim/plugins.vim
 
@@ -5,8 +6,9 @@ source ~/.config/nvim/plugins.vim
 " ===                           EDITING OPTIONS                            === "
 " ============================================================================ "
 
-" Remap leader key to ,
-let g:mapleader=','
+" Remap leader key to <Space>
+nnoremap <SPACE> <Nop>
+let g:mapleader = ' '
 
 " Disable line numbers
 set nonumber
@@ -240,7 +242,7 @@ set fillchars+=vert:.
 " Set preview window to appear at bottom
 set splitbelow
 
-" Don't dispay mode in command line (airilne already shows it)
+" Don't dispay mode in command line (airline already shows it)
 set noshowmode
 
 " Set floating window to be slightly transparent
@@ -324,17 +326,20 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 " ===                             KEY MAPPINGS                             === "
 " ============================================================================ "
 
-" === Denite shorcuts === "
+" === Denite shortcuts === "
 "   ;         - Browser currently open buffers
 "   <leader>t - Browse list of files in current directory
-"   <leader>g - Search current directory for occurences of given term and close window if no results
-"   <leader>j - Search current directory for occurences of word under cursor
+"   <leader>g - Search current directory for occurrences of given term and close window if no results
+"   <leader>j - Search current directory for occurrences of word under cursor
 nmap ; :Denite buffer<CR>
 nmap <leader>t :DeniteProjectDir file<CR>
 nnoremap <leader>g :<C-u>Denite grep:. -no-empty<CR>
 nnoremap <leader>j :<C-u>DeniteCursorWord grep:.<CR>
 
 " Remap jj to Esc
+inoremap jj <ESC>
+
+" Remap jk to :noh
 inoremap jj <ESC>
 
 
@@ -366,7 +371,7 @@ endfunction
 " Define mappings while in denite window
 "   <CR>        - Opens currently selected file
 "   q or <Esc>  - Quit Denite window
-"   d           - Delete currenly selected file
+"   d           - Delete currently selected file
 "   p           - Preview currently selected file
 "   <C-o> or i  - Switch to insert mode inside of filter prompt
 "   <C-t>       - Open currently selected file in a new tab
@@ -402,10 +407,10 @@ endfunction
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
 
-"   <Space> - PageDown
-"   -       - PageUp
-noremap <Space> <PageDown>
-noremap - <PageUp>
+"   -       - PageDown
+"   =       - PageUp
+noremap - <PageDown>
+noremap = <PageUp>
 
 " Quick window switching
 nmap <C-h> <C-w>h
@@ -427,9 +432,9 @@ nnoremap <silent> <leader>ds :<C-u>CocList -I -N --top symbols<CR>
 "   <leader>y - Automatically remove trailing whitespace
 nmap <leader>y :StripWhitespace<CR>
 
-" === Search shorcuts === "
+" === Search shortcuts === "
 "   <leader>h - Find and replace
-"   <leader>/ - Claer highlighted search terms while preserving history
+"   <leader>/ - Clear highlighted search terms while preserving history
 map <leader>h :%s///<left><left>
 nmap <silent> <leader>/ :nohlsearch<CR>
 
@@ -444,7 +449,7 @@ cmap w!! w !sudo tee %
 " Generate jsdoc for function under cursor
 nmap <leader>z :JsDoc<CR>
 
-" Delete current visual selection and dump in black hole buffer before pasting
+" Delete current visual selection an dump in black hole buffer before pasting
 " Used when you want to paste over something without it getting copied to
 " Vim's default buffer
 vnoremap <leader>p "_dP
