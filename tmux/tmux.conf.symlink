@@ -51,7 +51,7 @@ bind -n WheelDownPane select-pane -t= \; send-keys -M
 set -sg escape-time 1
 
 # use send-prefix to pass C-a through to application
-bind C-a send-prefix
+bind C-t send-prefix
 
 # reload ~/.tmux.conf using PREFIX r
 bind r source-file ~/.tmux.conf \; display "tmux.conf source"
