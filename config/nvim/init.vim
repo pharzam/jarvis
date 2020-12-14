@@ -331,8 +331,8 @@ command! -nargs=0 Prettier :CocCommand prettier.formatFile
 "   <leader>t - Browse list of files in current directory
 "   <leader>g - Search current directory for occurrences of given term and close window if no results
 "   <leader>j - Search current directory for occurrences of word under cursor
-nmap ; :Denite buffer<CR>
-nmap <leader>t :DeniteProjectDir file<CR>
+nmap <TAB><TAB> :Denite buffer<CR><C-o>
+nmap <leader>t :DeniteProjectDir file<CR><C-o>
 nnoremap <leader>g :<C-u>Denite grep:. -no-empty<CR>
 nnoremap <leader>j :<C-u>DeniteCursorWord grep:.<CR>
 
@@ -340,7 +340,7 @@ nnoremap <leader>j :<C-u>DeniteCursorWord grep:.<CR>
 inoremap jj <ESC>
 
 " Remap jk to :noh
-inoremap jj <ESC>
+inoremap jk <ESC> :noh
 
 
 " Define mappings while in 'filter' mode
@@ -453,6 +453,12 @@ nmap <leader>z :JsDoc<CR>
 " Used when you want to paste over something without it getting copied to
 " Vim's default buffer
 vnoremap <leader>p "_dP
+
+nmap <leader>c :CocAction<CR>
+
+nmap <leader>a  ^
+nmap <leader>e  $
+
 
 " ============================================================================ "
 " ===                                 MISC.                                === "
