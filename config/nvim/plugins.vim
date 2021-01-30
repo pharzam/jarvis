@@ -87,5 +87,8 @@ Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Marcdown viewer
 Plug 'euclio/vim-markdown-composer'
 
+"Git blame  inspired by 
+Plug 'APZelos/blamer.nvim'
+
 " Initialize plugin system
 call plug#end()
