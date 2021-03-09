@@ -37,11 +37,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'Shougo/denite.nvim'
 
 " Snippet support
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
-
+"Plug 'Shougo/neosnippet'
+"Plug 'Shougo/neosnippet-snippets'
+Plug 'honza/vim-snippets'
+Plug 'neoclide/coc-snippets'
 " Print function signatures in echo area
 Plug 'Shougo/echodoc.vim'
+
 
 " === Git Plugins === "
 " Enable git changes to be shown in sign column

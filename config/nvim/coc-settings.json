@@ -1,11 +1,7 @@
 {
   "suggest.echodocSupport": true,
   "suggest.maxCompleteItemCount": 20,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "json",
-    "javascriptreact"
-  ],
+  "coc.preferences.formatOnSaveFiletypes": ["json"],
   "eslint.nodePath": "/Users/farzam/.config/yarn/global/node_modules",
   "eslint.filetypes": ["javascript", "javascriptreact"],
   "eslint.options": {
@@ -18,6 +14,7 @@
     "Denite",
     "Werks",
     "farzam",
+    "gitlab",
     "hijyen",
     "jsdoc",
     "konzek",
